@@ -35,6 +35,12 @@ class WebsiteController extends Controller
         ]);
     }
 
+
+    public function staticPage(): Response
+    {
+        return Inertia::render('static-page');
+    }
+
     public function search(Request $request)
     {
         if (!$request->expectsJson()) {
@@ -65,5 +71,4 @@ class WebsiteController extends Controller
             'Expires' => '0',
         ]);
     }
-
 }
